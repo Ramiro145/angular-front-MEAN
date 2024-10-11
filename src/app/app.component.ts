@@ -16,12 +16,12 @@ export class AppComponent {
   public finishedAuthCheck = computed<boolean>(()=> {
 
     if(this.authService.authStatus() === AuthStatus.checking){
-      return false;
+      return true;
     }
 
 
 
-    return true;
+    return false;
   });
 
   public authStatusChangedEffect = effect(()=>{
